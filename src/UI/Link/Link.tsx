@@ -1,4 +1,5 @@
 import React from 'react'
+import "./link.css";
 
 type linkProps = {
     link : string,
@@ -8,6 +9,12 @@ type linkProps = {
 
 export default function Link({link, name}: linkProps) {
   return (
-    <a href={link}>{name}</a>
+    <a href={link}
+      className='
+        hover:text-[#ff6f3c]      
+      '
+    > 
+      {name}
+    </a>
   )
 }
