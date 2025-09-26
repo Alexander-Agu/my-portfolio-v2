@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./header.css";
 import Link from '../../UI/Link/Link'
 import { CgMenuRight } from "react-icons/cg";
 import { RiCloseLargeFill } from "react-icons/ri";
-import { FaS } from 'react-icons/fa6';
 
 
 export default function Header() {
@@ -32,25 +31,25 @@ export default function Header() {
                 flex items-center justify-center
                 '
             >
-                <input type="checkbox" id='sidebar' className='hidden' />
 
-                <label htmlFor="sidebar" onClick={()=> setMenuOpen(true)}>
+                <div className='md:hidden' onClick={()=> setMenuOpen(true)}>
                     <CgMenuRight />
-                </label>
+                </div>
 
                 <ul
                     className={`
-                        h-[100dvh] w-[250px] fixed right-0 top-0 p-[1rem]
-                        bg-black text-white
-                        flex items-center justify-start flex-col gap-[1rem]
-                        transform transition-transform duration-300 ease-in-out
-                        ${menuOpen ? "translate-x-0" : "translate-x-full"}
+                    fixed top-0 right-0 h-[100vh] w-[250px] bg-black text-white p-4 flex flex-col gap-4
+                    transform transition-transform duration-300 ease-in-out
+                    ${menuOpen ? "translate-x-0" : "translate-x-full"}
+
+                    md:static md:translate-x-0 md:h-auto md:w-auto md:bg-transparent md:text-black md:flex-row md:gap-6
                     `}
                 >
                     <li>
-                        <label htmlFor="sidebar" onClick={()=> setMenuOpen(false)}>
+                        <div className='md:hidden'
+                         onClick={()=> setMenuOpen(false)}>
                             <RiCloseLargeFill />
-                        </label>
+                        </div>
                     </li>
                     <li>
                         <Link link='#home' name='Home' />
