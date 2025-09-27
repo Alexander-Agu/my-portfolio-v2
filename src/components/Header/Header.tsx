@@ -14,6 +14,7 @@ export default function Header() {
             className='
                 h-[80px] w-full bg-[#ECECEC] p-4
                 flex items-center justify-between
+                fixed
             '
         >
 
@@ -22,7 +23,7 @@ export default function Header() {
                 
                 '
             >
-                <h2>Alexander Agu</h2>
+                <h2 className='inter text-[1.5rem] font-bold'>Alexander Agu</h2>
             </a>
             
 
@@ -37,7 +38,7 @@ export default function Header() {
                 </div>
 
                 <ul
-                    className={`
+                    className={` inter
                     fixed top-0 right-0 h-[100vh] w-[250px] bg-black text-white p-4 flex flex-col gap-4
                     transform transition-transform duration-300 ease-in-out
                     ${menuOpen ? "translate-x-0" : "translate-x-full"}
