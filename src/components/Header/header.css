@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+
+.scrolled {
+    background-color: #ff6f3c;
+    /* Updated theme color */
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #ff6f3c;
+    transition: 500ms;
+}
+
+
 @media (max-width: 768px) {
     .menu {
         @apply w-full;

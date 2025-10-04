@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./header.css";
 import Link from '../../UI/Link/Link'
 import { CgMenuRight } from "react-icons/cg";
@@ -7,15 +7,30 @@ import { RiCloseLargeFill } from "react-icons/ri";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // Handle scroll effect
+    useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50 && !isScrolled) {
+        setIsScrolled(true);
+      } else if (window.scrollY <= 50 && isScrolled) {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isScrolled]);
 
 
     return (
         <header 
-            className='
-                h-[80px] w-full bg-[#ECECEC] p-4
+            className={`${isScrolled? "scrolled" : 'bg-[#ECECEC]'}
+                h-[80px] w-full  p-4
                 flex items-center justify-between
                 fixed
-            '
+            `}
         >
 
             <a href="/" 
