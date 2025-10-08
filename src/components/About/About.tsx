@@ -7,21 +7,20 @@ import TechStack from "./about/TechStack";
 
 const About = () => {
   const techStack = [
-    "React", "Tailwind CSS", "ASP.NET", "Java Spring Boot", 
-    "Node.js", "SQL Server", "MySQL", "Firebase", 
-    "AWS", "Unity", "Godot", "Blender"
+    "React", "TypeScript", "Tailwind CSS", "C#", "ASP.NET", "Docker",
+    "Node.js", "SQL Server", "MySQL","Unity", "Godot", "Blender"
   ];
 
   const highlights = [
     {
+      icon: GraduationCap,
+      title: "WeThinkCode Student ( Sep. 2024 - Dec. 2025 )",
+      description: "Software Engineering Deploma"
+    },
+    {
       icon: Code2,
       title: "Full-Stack Development",
       description: "Building scalable web applications with modern technologies"
-    },
-    {
-      icon: GraduationCap,
-      title: "WeThinkCode Graduate",
-      description: "Rigorous training in algorithmic thinking and software architecture"
     },
     {
       icon: Users,
@@ -30,14 +29,9 @@ const About = () => {
     }
   ];
 
-  const stats = [
-    { value: "3+", label: "Years Experience" },
-    { value: "50+", label: "Projects Built" },
-    { value: "12+", label: "Technologies" }
-  ];
 
   return (
-    <section id="about" className="section-dark py-24 px-6 relative overflow-hidden">
+    <section id="about" className="section-dark py-24 px-6 relative overflow-hidden bg-[rgb(31,31,33)]">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
       
@@ -58,7 +52,6 @@ const About = () => {
               journey="where I developed strong foundations in software engineering, algorithmic thinking, and collaborative development. The rigorous peer-learning environment taught me not just to code, but to think like an engineer."
               current="Today, I combine my technical expertise with a passion for mentorship, helping guide aspiring developers while continuously pushing the boundaries of what's possible with modern web technologies."
             />
-            <AboutStats stats={stats} />
           </div>
 
           {/* Right: Highlights */}

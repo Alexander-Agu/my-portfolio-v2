@@ -29,7 +29,7 @@ export default function Header() {
             className={`${isScrolled? "scrolled" : 'bg-[#ECECEC]'}
                 h-[80px] w-full  p-4
                 flex items-center justify-between
-                fixed
+                fixed z-[100]
             `}
         >
 
@@ -53,8 +53,8 @@ export default function Header() {
                 </div>
 
                 <ul
-                    className={` inter
-                    fixed top-0 right-0 h-[100vh] w-[250px] bg-black text-white p-4 flex flex-col gap-4
+                    className={` inter ${isScrolled? "scrolled" : 'bg-[#ECECEC]'}
+                    fixed top-0 right-0 h-[100vh] w-[250px] bg-[rgb(31,31,33)] text-white p-4 flex flex-col gap-4
                     transform transition-transform duration-300 ease-in-out
                     ${menuOpen ? "translate-x-0" : "translate-x-full"}
 
@@ -71,10 +71,10 @@ export default function Header() {
                         <Link link='#home' name='Home' />
                     </li>
                     <li>
-                        <Link link='#home' name='About' />
+                        <Link link='#resume' name='Resume' />
                     </li>
                     <li>
-                        <Link link='#home' name='Projects' />
+                        <Link link='#about' name='About' />
                     </li>
                     <li>
                         <Link link='#home' name='Contact' />

@@ -16,13 +16,13 @@ const AboutStory = ({
   return (
     <div className="space-y-6">
       <div className="space-y-5 text-lg leading-relaxed">
-        <p className="text-foreground/90">
-          I'm <span className="font-bold text-primary">{name}</span>, {introduction}
+        <p className="text-[#ffffff8e]">
+          I'm <span className="font-bold text-[#ffffff]">{name}</span>, {introduction}
         </p>
-        <p className="text-muted-foreground">
-          My journey began at <span className="font-semibold text-foreground">{highlightName}</span>, {journey}
+        <p className="text-[#ffffff8e]">
+          My journey began at <span className="font-semibold text-[#ffffff]">{highlightName}</span>, {journey}
         </p>
-        <p className="text-muted-foreground">
+        <p className="text-[#ffffff8e]">
           {current}
         </p>
       </div>

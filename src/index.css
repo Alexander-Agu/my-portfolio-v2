@@ -1,7 +1,0 @@
-@import "tailwindcss";
-
-@layer base {
-    p {
-        @apply m-0;
-    }
-}
