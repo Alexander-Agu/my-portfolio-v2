@@ -9,7 +9,6 @@ interface AboutHighlightCardProps {
 const AboutHighlightCard = ({ icon: Icon, title, description }: AboutHighlightCardProps) => {
   return (
     <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-card-dark to-card-dark/50 border border-[#ffffff8e] hover:border-primary/30 transition-all duration-500 hover:translate-x-2">
-      {/* Glow effect on hover */}
       <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
       <div className="relative flex gap-4">

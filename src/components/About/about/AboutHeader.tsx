@@ -13,7 +13,7 @@ const AboutHeader = ({
 }: AboutHeaderProps) => {
   return (
     <div className="text-center space-y-4 mb-20">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-[#ffffff] mb-4">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ffffff] mb-4">
         <Sparkles className="w-4 h-4 text-primary text-[#ffffff]" />
         <span className="text-sm font-medium text-[#ffffff]">{badge}</span>
       </div>

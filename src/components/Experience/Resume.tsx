@@ -1,8 +1,7 @@
-import { GraduationCap, Briefcase, MapPin, Calendar } from "lucide-react";
 import ResumeCard from "./ResumeCard";
 import { education, experience } from "./ResumeTools";
 
-const Experience = () => {
+const Resume = () => {
   return (
     <section id="resume" className="section-white py-20 px-6">
       <div className="container max-w-7xl mx-auto">
@@ -16,7 +15,22 @@ const Experience = () => {
 
         {/* Two Column Layout */}
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Education Column */}
+          {
+            experience.map((x, index) => {
+              const {icon, type, name, timeSpan, company, location, results} = x;
+
+              return <ResumeCard key={index}
+                icon={icon}
+                type={type}
+                name={name}
+                timeSpan={timeSpan}
+                location={location}
+                results={results}
+                company={company}
+              />
+            })
+          }
+          
           {
             education.map((x, index) => {
               const {icon, type, name, timeSpan, company, location, results} = x;
@@ -33,23 +47,6 @@ const Experience = () => {
             })
           }
 
-          {
-            experience.map((x, index) => {
-              const {icon, type, name, timeSpan, company, location, results} = x;
-
-              return <ResumeCard key={index}
-                icon={icon}
-                type={type}
-                name={name}
-                timeSpan={timeSpan}
-                location={location}
-                results={results}
-                company={company}
-              />
-            })
-          }
-
-          {/* Experience Column */}
 
         </div>
       </div>
@@ -57,4 +54,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Resume;

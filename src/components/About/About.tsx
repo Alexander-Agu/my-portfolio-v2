@@ -1,7 +1,6 @@
 import { Code2, GraduationCap, Users } from "lucide-react";
 import AboutHeader from "./about/AboutHeader";
 import AboutStory from "./about/AboutStory";
-import AboutStats from "./about/AboutStats";
 import AboutHighlightCard from "./about/AboutHighlightCard";
 import TechStack from "./about/TechStack";
 
