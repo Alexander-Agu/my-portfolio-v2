@@ -18,7 +18,7 @@ export const iconLinks: Ilinks[] = [
         icon: <FiGithub />
     },
     {
-        link: "www.linkedin.com/in/alexander-agu-b1968630a",
+        link: "https://www.linkedin.com/in/alexander-agu-b1968630a",
         icon: <AiOutlineLinkedin />
     },
     {
