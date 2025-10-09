@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 import project1 from "../../assets/invitory.png";
 import project2 from "../../assets/fin.jpg";
 import { FiGithub } from "react-icons/fi"
+import { motion } from "motion/react";
 
 const Projects = () => {
   const projects = [
@@ -11,7 +12,8 @@ const Projects = () => {
       image: project1,
       tags: ["React", "ASP.NET", "Docker"],
       github: "https://github.com/Alexander-Agu/Invi-Tory.git",
-      demo: "https://invi-tory.vercel.app/"
+      demo: "https://invi-tory.vercel.app/",
+      dir: -100
     },
     {
       title: "Property Management API",
@@ -19,25 +21,55 @@ const Projects = () => {
       image: project2,
       tags: ["C#", "ASP.NET", "SQL", "Docker", "Makefile", "Bash"],
       github: "https://github.com/Alexander-Agu/FIN.git",
-      demo: "#"
+      demo: "#",
+      dir: 100
     }
   ];
 
   return (
-    <section id="projects" className="section-light py-20 px-6 inter">
+    <section id="projects" className="section-light py-20 px-6 inter overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center">
 
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-card-foreground">Featured Projects</h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-          <p className="text-lg text-[#0000008e] max-w-2xl mx-auto">
+          <motion.h2 className="text-4xl md:text-5xl font-black"
+            variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.25}}
+          >
+            Featured Projects
+          </motion.h2>
+          
+          <motion.p className="text-lg text-[#0000008e] max-w-2xl mx-auto"
+              variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.30}}
+          >
             A showcase of the projects I’ve built and the work I’ve done.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="border border-black group">
+            <motion.div key={index} className="border border-black group"
+              variants={{
+              hidden: {opacity: 0, x: project.dir},
+              visible: {opacity: 1, x: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.25}}
+            >
               <div className="relative overflow-hidden aspect-video">
                 <img 
                   src={project.image} 
@@ -81,21 +113,29 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         
-        <a
+        <motion.a
           href="https://github.com/Alexander-Agu"
           target="_blank" 
           rel="noopener noreferrer"
           className="mt-7 p-3 hover:bg-[rgb(31,31,33)] text-black
             border border-[rgb(31,31,33)] bg-transparent hover:text-[#ffffff]
           "
+                      variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.25}}
         >
           <FiGithub className="w-4 h-4 mr-2 " /> 
           View my GITHUB
-        </a>
+        </motion.a>
       </div>
     </section>
   );

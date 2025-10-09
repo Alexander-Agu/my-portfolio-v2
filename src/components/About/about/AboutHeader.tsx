@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import { motion } from "motion/react";
 
 interface AboutHeaderProps {
   title: string;
@@ -12,7 +13,16 @@ const AboutHeader = ({
   badge = "About Me" 
 }: AboutHeaderProps) => {
   return (
-    <div className="text-center space-y-4 mb-20">
+    <motion.div className="text-center space-y-4 mb-20"
+      variants={{
+        hidden: {opacity: 0, y: 75},
+        visible: {opacity: 1, y: 0}
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{duration: 0.5, delay: 0.25}}
+    >
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ffffff] mb-4">
         <Sparkles className="w-4 h-4 text-primary text-[#ffffff]" />
         <span className="text-sm font-medium text-[#ffffff]">{badge}</span>
@@ -23,7 +33,7 @@ const AboutHeader = ({
       <p className="text-xl text-[#ffffff8e] max-w-2xl mx-auto">
         {subtitle}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

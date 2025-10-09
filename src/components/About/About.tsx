@@ -3,12 +3,16 @@ import AboutHeader from "./about/AboutHeader";
 import AboutStory from "./about/AboutStory";
 import AboutHighlightCard from "./about/AboutHighlightCard";
 import TechStack from "./about/TechStack";
+import { motion } from "motion/react";
+import { useState } from "react";
 
 const About = () => {
   const techStack = [
     "React", "TypeScript", "Tailwind CSS", "C#", "ASP.NET", "Docker",
     "Node.js", "SQL Server", "MySQL","Unity", "Godot", "Blender"
   ];
+
+  let pos = 25;
 
   const highlights = [
     {
@@ -44,25 +48,36 @@ const About = () => {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
           {/* Left: Story */}
-          <div className="space-y-6">
+          <motion.div className="space-y-6"
+            variants={{
+              hidden: {opacity: 0, x: -100},
+              visible: {opacity: 1, x: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.25}}
+          >
             <AboutStory 
               name="Alexander Agu"
               introduction="a South African full-stack developer and technical mentor dedicated to building innovative solutions that make a difference."
               journey="where I developed strong foundations in software engineering, algorithmic thinking, and collaborative development. The rigorous peer-learning environment taught me not just to code, but to think like an engineer."
               current="Today, I combine my technical expertise with a passion for mentorship, helping guide aspiring developers while continuously pushing the boundaries of what's possible with modern web technologies."
             />
-          </div>
+          </motion.div>
 
           {/* Right: Highlights */}
           <div className="space-y-6">
-            {highlights.map((item, index) => (
-              <AboutHighlightCard 
+            {highlights.map((item, index) => {
+              pos += 10
+              return <AboutHighlightCard
+                pos={pos}
                 key={index}
                 icon={item.icon}
                 title={item.title}
                 description={item.description}
               />
-            ))}
+            })}
           </div>
         </div>
 

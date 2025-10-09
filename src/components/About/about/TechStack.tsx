@@ -1,4 +1,5 @@
 import { Target } from "lucide-react";
+import { motion } from "motion/react";
 
 interface TechStackProps {
   technologies: string[];
@@ -12,7 +13,16 @@ const TechStack = ({
   subtitle = "Tools and frameworks I work with"
 }: TechStackProps) => {
   return (
-    <div className="relative">
+    <motion.div className="relative"
+      variants={{
+        hidden: {opacity: 0, y: 75},
+        visible: {opacity: 1, y: 0}
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{duration: 0.5, delay: 0.25}}
+    >
       <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
       
       <div className="text-center mb-8">
@@ -35,7 +45,7 @@ const TechStack = ({
           </span>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

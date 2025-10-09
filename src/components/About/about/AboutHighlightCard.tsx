@@ -1,14 +1,25 @@
 import type { LucideIcon } from "lucide-react";
+import { motion } from "motion/react";
 
 interface AboutHighlightCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
+  pos: number
 }
 
-const AboutHighlightCard = ({ icon: Icon, title, description }: AboutHighlightCardProps) => {
+const AboutHighlightCard = ({pos, icon: Icon, title, description }: AboutHighlightCardProps) => {
   return (
-    <div className="group relative p-6 rounded-2xl border border-[#ffffff8e] transition-all duration-500 hover:translate-x-2">
+    <motion.div className="group relative p-6 rounded-2xl border border-[#ffffff8e] transition-all duration-500 hover:translate-x-2"
+      variants={{
+        hidden: {opacity: 0, y: pos},
+        visible: {opacity: 1, y: 0}
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{duration: 0.5, delay: 0.25}}
+    >
       <div className="absolute inset-0 rounded-2xl opacity-0" />
       
       <div className="relative flex gap-4">
@@ -26,7 +37,7 @@ const AboutHighlightCard = ({ icon: Icon, title, description }: AboutHighlightCa
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

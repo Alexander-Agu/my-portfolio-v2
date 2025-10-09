@@ -1,4 +1,5 @@
 import { MapPin, Calendar } from "lucide-react";
+import { motion } from "motion/react";
 
 type resumeCardProps = {
   icon: React.ReactNode,
@@ -7,13 +8,22 @@ type resumeCardProps = {
   company: string,
   timeSpan: string,
   location: string,
-  results: Array<string>
-  
+  results: Array<string>,
+  dir: number
 };
 
-export default function ResumeCard({icon, type, name, company, timeSpan, location, results}:resumeCardProps) {
+export default function ResumeCard({dir, icon, type, name, company, timeSpan, location, results}:resumeCardProps) {
   return (
-        <div className="inter">
+        <motion.div className="inter"
+                      variants={{
+              hidden: {opacity: 0, x: dir},
+              visible: {opacity: 1, x: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.25}}
+        >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center border border-green-500 bg-green-300 text-green-600">
                 {icon}
@@ -57,6 +67,6 @@ export default function ResumeCard({icon, type, name, company, timeSpan, locatio
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
   )
 }

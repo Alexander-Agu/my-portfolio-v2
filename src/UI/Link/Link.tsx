@@ -10,7 +10,7 @@ export default function Link({link, name}: linkProps) {
   return (
     <a href={link}
       className='
-        hover:text-[#ff6f3c]      
+        hover:text-green-400     
       '
     > 
       {name}

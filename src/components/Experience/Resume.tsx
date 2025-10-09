@@ -3,17 +3,41 @@ import { education, experience } from "./ResumeTools";
 import { FaRegNewspaper } from "react-icons/fa6";
 import CV from "../../assets/Alexander_Agu_Resume.pdf";
 import { AiOutlineLinkedin } from "react-icons/ai";
+import { motion } from "motion/react";
 
 const Resume = () => {
   return (
-    <section id="resume" className="section-white py-20 px-6">
+    <section id="resume" className="section-white py-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
+
+          <motion.h2 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}
+            variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.25}}
+          >
             Resume
-          </h2>
-          <p className="text-gray-600 text-lg">My professional journey and education</p>
+          </motion.h2>
+
+
+          <motion.p className="text-gray-600 text-lg"
+            variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.30}}
+          >
+            My professional journey and education
+          </motion.p>
         </div>
 
         {/* Two Column Layout */}
@@ -23,6 +47,7 @@ const Resume = () => {
               const {icon, type, name, timeSpan, company, location, results} = x;
 
               return <ResumeCard key={index}
+                dir={-100}
                 icon={icon}
                 type={type}
                 name={name}
@@ -39,6 +64,7 @@ const Resume = () => {
               const {icon, type, name, timeSpan, company, location, results} = x;
 
               return <ResumeCard key={index}
+                dir={100}
                 icon={icon}
                 type={type}
                 name={name}
@@ -53,7 +79,16 @@ const Resume = () => {
 
         </div>
 
-        <div className="flex flex-row items-center justify-center gap-3">
+        <motion.div className="flex flex-row items-center justify-center gap-3"
+            variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0}
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{duration: 0.5, delay: 0.25}}
+        >
           <a
             href={CV}
             target="_blank"
@@ -77,7 +112,7 @@ const Resume = () => {
             <AiOutlineLinkedin className="w-4 h-4 mr-2 " /> 
             View my LinkedIn
           </a>
-        </div>
+        </motion.div>
 
       </div>
     </section>
