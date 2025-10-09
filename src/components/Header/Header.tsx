@@ -68,16 +68,19 @@ export default function Header() {
                         </div>
                     </li>
                     <li>
-                        <Link link='#home' name='Home' />
+                        <Link link='#' name='Home' />
                     </li>
                     <li>
                         <Link link='#resume' name='Resume' />
                     </li>
                     <li>
+                        <Link link='#projects' name='Projects' />
+                    </li>
+                    <li>
                         <Link link='#about' name='About' />
                     </li>
                     <li>
-                        <Link link='#home' name='Contact' />
+                        <Link link='#contact' name='Contacts' />
                     </li>
                 </ul>
             </nav>

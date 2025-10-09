@@ -6,7 +6,7 @@ import { FiGithub } from "react-icons/fi"
 const Projects = () => {
   const projects = [
     {
-      title: "Task Management Dashboard",
+      title: "Invitory",
       description: "A full-stack inventory management application built with ASP.NET (C#), React, and SQL Server. This app supports user registration and login, secure inventory tracking, and item categorization by type.",
       image: project1,
       tags: ["React", "ASP.NET", "Docker"],
@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section-light py-20 px-6 inter">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center">
 
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-card-foreground">Featured Projects</h2>
@@ -85,6 +85,15 @@ const Projects = () => {
           ))}
         </div>
         
+        <a
+          href="https://github.com/Alexander-Agu"
+          className="mt-7 p-3 hover:bg-[rgb(31,31,33)] text-black
+            border border-[rgb(31,31,33)] bg-transparent hover:text-[#ffffff]
+          "
+        >
+          <FiGithub className="w-4 h-4 mr-2 " /> 
+          View my GITHUB
+        </a>
       </div>
     </section>
   );
