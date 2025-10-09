@@ -1,4 +1,3 @@
-import React from 'react'
 import "./link.css";
 
 type linkProps = {
