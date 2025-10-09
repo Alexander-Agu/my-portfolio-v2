@@ -2,6 +2,7 @@ import ResumeCard from "./ResumeCard";
 import { education, experience } from "./ResumeTools";
 import { FaRegNewspaper } from "react-icons/fa6";
 import CV from "../../assets/Alexander_Agu_Resume.pdf";
+import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Resume = () => {
   return (
@@ -52,15 +53,32 @@ const Resume = () => {
 
         </div>
 
-        <a
-          href={CV}
-          className="mt-7 p-3 hover:bg-[rgb(31,31,33)] text-black
-            border border-[rgb(31,31,33)] bg-transparent hover:text-[#ffffff]
-          "
-        >
-          <FaRegNewspaper className="w-4 h-4 mr-2 " /> 
-          Download my CV
-        </a>
+        <div className="flex flex-row items-center justify-center gap-3">
+          <a
+            href={CV}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 p-3 hover:bg-[rgb(31,31,33)] text-black
+              border border-[rgb(31,31,33)] bg-transparent hover:text-[#ffffff]
+            "
+          >
+            <FaRegNewspaper className="w-4 h-4 mr-2 " /> 
+            Download my CV
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/alexander-agu-b1968630a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 p-3 hover:bg-[rgb(31,31,33)] text-black
+              border border-[rgb(31,31,33)] bg-transparent hover:text-[#ffffff]
+            "
+          >
+            <AiOutlineLinkedin className="w-4 h-4 mr-2 " /> 
+            View my LinkedIn
+          </a>
+        </div>
+
       </div>
     </section>
   );

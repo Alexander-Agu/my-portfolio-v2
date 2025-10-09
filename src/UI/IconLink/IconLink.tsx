@@ -12,7 +12,7 @@ export default function IconLink({link, icon}: IconLinkProps) {
         border border-black rounded-full
         flex items-center justify-center
         hover:bg-black hover:text-white
-    " download={icon === "CV"}>
+    " download={icon === "CV"} target="_blank" rel="noopener noreferrer">
         {icon}
     </a>
   )

@@ -87,6 +87,8 @@ const Projects = () => {
         
         <a
           href="https://github.com/Alexander-Agu"
+          target="_blank" 
+          rel="noopener noreferrer"
           className="mt-7 p-3 hover:bg-[rgb(31,31,33)] text-black
             border border-[rgb(31,31,33)] bg-transparent hover:text-[#ffffff]
           "
