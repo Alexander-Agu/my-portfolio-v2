@@ -30,9 +30,9 @@ const About = () => {
 
 
   return (
-    <section id="about" className="section-dark py-24 px-6 relative overflow-hidden bg-[rgb(31,31,33)]">
+    <section id="about" className="nunito py-24 px-6 relative overflow-hidden bg-[rgb(31,31,33)]">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 " />
       
       <div className="container max-w-7xl mx-auto relative z-10">
         {/* Section Header */}

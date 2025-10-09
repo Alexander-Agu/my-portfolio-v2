@@ -27,7 +27,8 @@ const TechStack = ({
         {technologies.map((tech, index) => (
           <span 
             key={tech} 
-            className="tech-badge hover:scale-105 transition-all duration-300 cursor-default text-[#ffffff]"
+            className="tech-badge hover:scale-105 transition-all duration-300 cursor-default text-[#ffffff] pl-2 pr-2 text-center border border-amber-100 rounded-2xl
+             bg-[#ffffff69]"
             style={{ animationDelay: `${index * 50}ms` }}
           >
             {tech}

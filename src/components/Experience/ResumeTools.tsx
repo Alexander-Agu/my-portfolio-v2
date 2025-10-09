@@ -24,7 +24,7 @@ export const experience = [
         type: "Experience",
         name: "Technical Mentor",
         company: "WeThinkCode",
-        timeSpan: "Sep 2025 – Dec 2024",
+        timeSpan: "Sep 2025 – Dec 2025",
         location: "Gauteng, Rosebank",
         results: [
             "Guided first-year students through core programming concepts and project-based learning, ensuring they built a strong technical foundation",

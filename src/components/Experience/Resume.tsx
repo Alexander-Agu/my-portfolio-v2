@@ -4,7 +4,7 @@ import { education, experience } from "./ResumeTools";
 const Resume = () => {
   return (
     <section id="resume" className="section-white py-20 px-6">
-      <div className="container max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
