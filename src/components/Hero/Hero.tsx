@@ -77,7 +77,7 @@ export default function Hero() {
 
             lg:w-auto
         "
-                variants={{
+                variants={{ 
             hidden: { opacity: 0, y: 75 },
             visible: { opacity: 1, y: 0 }
             }}
