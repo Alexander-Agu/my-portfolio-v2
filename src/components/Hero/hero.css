@@ -21,19 +21,26 @@
 
 @media screen and (min-width: 1024px) {
     .title{
-        @apply text-[6.9rem]
+        @apply text-[6.8rem]
         items-center justify-start font-medium
     }
 }
 
 @media screen and (min-width: 1280px) {
     .title{
-        @apply text-[9.4rem]
+        @apply text-[9rem]
         items-center justify-start font-medium
     }
 }
 
 @media screen and (min-width: 1536px) {
+    .title{
+        @apply text-[11.5rem]
+        items-center justify-start font-medium
+    }
+}
+
+@media screen and (min-width: 1600px) {
     .title{
         @apply text-[12rem]
         items-center justify-start font-medium

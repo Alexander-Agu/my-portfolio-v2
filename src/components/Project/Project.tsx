@@ -10,7 +10,7 @@ const Projects = () => {
       title: "Invitory",
       description: "A full-stack inventory management application built with ASP.NET (C#), React, and SQL Server. This app supports user registration and login, secure inventory tracking, and item categorization by type.",
       image: project1,
-      tags: ["React", "ASP.NET", "Docker"],
+      tags: ["JavaScript" ,"React", "C#", "ASP.NET", "Docker"],
       github: "https://github.com/Alexander-Agu/Invi-Tory.git",
       demo: "https://invi-tory.vercel.app/",
       dir: -100

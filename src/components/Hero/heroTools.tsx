@@ -1,7 +1,7 @@
 import { HiOutlineMail } from "react-icons/hi";
 import { FiGithub } from "react-icons/fi"
 import { AiOutlineLinkedin } from "react-icons/ai";
-import Resume from "../../assets/Alexander_Agu_Resume.pdf";
+import Resume from "../../assets/Alexander_Agu_CV.pdf";
 
 interface Ilinks {
     link: string,

@@ -85,6 +85,8 @@ export default function Hero() {
             animate="visible"
             transition={{duration: 0.5, delay: 0.30}}
         >
+            <p className="w-[250px] text-center text-[16px]">I’m a full-stack developer passionate about creating seamless and engaging front-end experiences.</p>
+            <br />
 
             <motion.div className="flex flex-row items-center gap-1"
             >

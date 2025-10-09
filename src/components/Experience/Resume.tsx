@@ -1,7 +1,7 @@
 import ResumeCard from "./ResumeCard";
 import { education, experience } from "./ResumeTools";
 import { FaRegNewspaper } from "react-icons/fa6";
-import CV from "../../assets/Alexander_Agu_Resume.pdf";
+import CV from "../../assets/Alexander_Agu_CV.pdf";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { motion } from "motion/react";
 
