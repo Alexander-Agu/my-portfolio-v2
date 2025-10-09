@@ -1,4 +1,4 @@
-import { GraduationCap, Briefcase, MapPin, Calendar } from "lucide-react";
+import { GraduationCap, Briefcase } from "lucide-react";
 
 export const education = [
     {
