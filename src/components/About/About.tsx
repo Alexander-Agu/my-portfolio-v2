@@ -4,7 +4,6 @@ import AboutStory from "./about/AboutStory";
 import AboutHighlightCard from "./about/AboutHighlightCard";
 import TechStack from "./about/TechStack";
 import { motion } from "motion/react";
-import { useState } from "react";
 
 const About = () => {
   const techStack = [
