@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import project1 from "../../assets/invitory.png";
 import project2 from "../../assets/fin.jpg";
+import project3 from "../../assets/quizeForge.png";
 import { FiGithub } from "react-icons/fi"
 import { motion } from "motion/react";
 
@@ -23,6 +24,15 @@ const Projects = () => {
       github: "https://github.com/Alexander-Agu/FIN.git",
       demo: "#",
       dir: 100
+    },
+    {
+      title: "Quiz Forge AWS",
+      description: "Quiz Forge AWS is a fun and interactive web-based quiz platform that tests your knowledge of cloud computing concepts and services. Designed for beginners and intermediate learners, this project aims to make studying cloud tech engaging and accessible.",
+      image: project3,
+      tags: ["JavaScript" ,"React", "Gemini Api"],
+      github: "https://github.com/Alexander-Agu/quizforge-aws",
+      demo: "https://quizforge-aws.vercel.app/",
+      dir: -100
     }
   ];
 

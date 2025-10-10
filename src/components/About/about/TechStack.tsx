@@ -27,7 +27,6 @@ const TechStack = ({
       
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold text-[#ffffff] mb-2 inline-flex items-center gap-2 ">
-          <Target className="w-6 h-6 text-[#ffffff]" />
           {title}
         </h3>
         <p className="text-[#ffffff8e]">{subtitle}</p>
