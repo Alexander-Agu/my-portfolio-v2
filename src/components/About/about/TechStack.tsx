@@ -1,4 +1,3 @@
-import { Target } from "lucide-react";
 import { motion } from "motion/react";
 
 interface TechStackProps {
