@@ -10,7 +10,7 @@ interface Ilinks {
 
 export const iconLinks: Ilinks[] = [
     {
-        link: "mailto:alexander.agu.dev@gmail.com",
+        link: "mailto:alagujhb024@student.wethinkcode.co.za",
         icon: <HiOutlineMail />
     },
     {

@@ -20,8 +20,8 @@ interface Ilinks {
 
 export const iconLinks: Ilinks[] = [
   {
-    name: "alexander.agu.dev@gmail.com",
-    link: "mailto:alexander.agu.dev@gmail.com",
+    name: "alagujhb024@student.wethinkcode.co.za",
+    link: "mailto:alagujhb024@student.wethinkcode.co.za",
     icon: <HiOutlineMail />
   },
   {
@@ -130,7 +130,7 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{duration: 0.5, delay: 0.25}}
       >
-          <div className="p-2 lg:p-5 w-full flex flex-col items-start justify-center gap-5 bg-[rgb(31,31,33)]">
+          <div className="p-2 lg:p-5 w-full flex flex-col items-start justify-center gap-5 bg-[ ]">
             <p className="text-[#ffffff] inter">Send Message</p>
 
 
@@ -140,7 +140,9 @@ export default function Contact() {
             <div className="w-full flex flex-col items-start justify-center gap-3">
               <p className="text-[#ffffff] inter">Message</p>
 
-              <textarea onChange={(e)=>{setMessage(e.target.value)}} value={message} name="message" id="" className="w-full border-none outline-none p-2 bg-[#424242] text-[#ffffff] inter" cols={60} rows={6}></textarea>
+              <textarea onChange={(e)=>{setMessage(e.target.value)}} value={message} name="message" id="" className="w-full border-none outline-none p-2 bg-[#424242] text-[#ffffff] inter" cols={60} rows={6}
+                
+                placeholder="Alexander, I’m pleased to inform you that you are going to be the 8th HOKAGE of the Village Hidden in the Leaf!"></textarea>
             </div>
 
             <button onClick={(e) => sendEmail(e)} className="hover:bg-[#353535] w-full h-[40px] p-2 bg-[#424242] outline-none border-none flex items-center justify-center text-[#ffffff] inter">
