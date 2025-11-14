@@ -4,7 +4,7 @@ import { LuNewspaper } from "react-icons/lu";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiGithub } from "react-icons/fi"
 import { AiOutlineLinkedin } from "react-icons/ai";
-import Resume from "../../assets/Alexander_Agu_CV.pdf";
+import Resume from "../../assets/Alexander_Agu_Resume.pdf";
 import { useState } from "react";
 import ContactInput from "./ContactInput";
 import emailjs from "emailjs-com";
