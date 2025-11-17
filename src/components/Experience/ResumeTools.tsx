@@ -4,7 +4,7 @@ export const education = [
     {
         icon: <GraduationCap className="w-6 h-6 text-[hsl(var(--green))]" />,
         type: "Education",
-        name: "Software Engineering Diploma",
+        name: "National diploma in Software Engineering (NQF Level 6), SAQA Qualification ID: 119458",
         company: "WeThinkCode",
         timeSpan: "Sep 2024 – Dec 2025",
         location: "Gauteng, Rosebank",
